@@ -3,7 +3,7 @@ import {Container} from "react-bootstrap"
 const Jumbotron = () =>
 <Jumbotron fluid>
   <Container>
-    <h1>Hello World</h1>
+    <h1>Hello World test</h1>
     <p>
       This is a modified jumbotron that occupies the entire horizontal space of
       its parent.
