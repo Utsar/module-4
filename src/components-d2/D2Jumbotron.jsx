@@ -1,6 +1,7 @@
 import {Container} from "react-bootstrap"
+import {Jumbotron} from "react-bootstrap"
 
-const Jumbotron = () =>
+const D2Jumbotron = () => 
 <Jumbotron fluid>
   <Container>
     <h1>Hello World test</h1>
@@ -11,4 +12,5 @@ const Jumbotron = () =>
   </Container>
 </Jumbotron>
 
-export default Jumbotron
+
+export default D2Jumbotron

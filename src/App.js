@@ -1,8 +1,8 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MyNavBar from "./components-d2/MyNavBar"
-import Footer from "./components-d2/Footer"
-import Jumbotron from "./components-d2/Jumbotron"
+import D2Footer from "./components-d2/D2Footer"
+import D2Jumbotron from "./components-d2/D2Jumbotron"
 import LatestRelease from './components-d2/LatestRelease';
 
 
@@ -11,9 +11,9 @@ function App() {
   return (
     <div>
       <MyNavBar/>
-      <Jumbotron/>
+      <D2Jumbotron/>
       <LatestRelease/>
-      <Footer/>
+      <D2Footer/>
   
     </div>
   );

@@ -1,7 +1,7 @@
 import {Col, Container, Row} from "react-bootstrap"
 
 
-const Footer = () =>
+const D2Footer = () =>
 <footer className="navbar fixed-bottom bg-dark">
    
         <Container>
@@ -15,4 +15,4 @@ const Footer = () =>
 
 </footer>
 
-export default Footer
+export default D2Footer
