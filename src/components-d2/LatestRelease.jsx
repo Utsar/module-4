@@ -1,7 +1,7 @@
 import {Container, Row, Col, Card} from "react-bootstrap"
 import books from "../assets/fantasy.json"
 
-const LatestRelease = () =>{
+const LatestRelease = () =>
     <Container> 
         <Row>   
             {   
@@ -25,6 +25,6 @@ const LatestRelease = () =>{
  }  
  </Row> 
  </Container>   
-}   
+  
 
 export default LatestRelease
