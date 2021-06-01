@@ -7,7 +7,7 @@ const LatestRelease = () =>
             {   
                 books.map((book)=>( 
                     <Col className="col-md-4" key={book.asin}>  
-                        <Card style={{ width: '18rem' }}>   
+                        <Card >   
   <Card.Img variant="top" src={book.img} /> 
   <Card.Body>   
     <Card.Title>{book.title}</Card.Title>   
@@ -16,8 +16,8 @@ const LatestRelease = () =>
     </Card.Text>    
   </Card.Body>  
   <Card.Body>   
-    <Card.Link href="#">Card Link</Card.Link>   
-    <Card.Link href="#">Another Link</Card.Link>    
+    <Card.Link href="#">${book.price}</Card.Link>   
+    <Card.Link href="#"><button>Buy Now</button></Card.Link>    
   </Card.Body>  
 </Card> 
 </Col>  
