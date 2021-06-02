@@ -21,10 +21,28 @@ class ReservationForm extends Component {
       },
     });
   };
-  submitReservation = (e) =>{
-      e.preventDefault()
-
-  }
+  submitReservation = async (e) => {
+    e.preventDefault();
+    try {
+      let response = await fetch(
+        "https://striveschool.herokuapp.com/api/reservations",
+        {
+          method: "POST",
+          body: JSON.stringify(this.state.reservation),
+          headers: {
+            "Content-type": "application/json",
+          },
+        }
+      );
+      if (response.ok) {
+        alert("Reservation saved!");
+      } else {
+        alert("Reservation failed!");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   render() {
     return (
       <Form onSubmit={this.submitReservation}>
