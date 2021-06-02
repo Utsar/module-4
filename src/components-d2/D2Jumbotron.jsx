@@ -6,8 +6,7 @@ const D2Jumbotron = () => (
     <Container>
       <h1>Hello World test</h1>
       <p>
-        This is a modified jumbotron that occupies the entire horizontal space
-        of its parent.
+        Welcome to the library
       </p>
     </Container>
   </Jumbotron>
