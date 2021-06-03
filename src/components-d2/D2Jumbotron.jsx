@@ -1,13 +1,12 @@
 import { Container } from "react-bootstrap";
 import { Jumbotron } from "react-bootstrap";
 
-const D2Jumbotron = () => (
+const D2Jumbotron = ({title, description}) => (
   <Jumbotron fluid>
     <Container>
-      <h1>Hello World test</h1>
+      <h1>{title}</h1>
       <p>
-        This is a modified jumbotron that occupies the entire horizontal space
-        of its parent.
+        {description}
       </p>
     </Container>
   </Jumbotron>
