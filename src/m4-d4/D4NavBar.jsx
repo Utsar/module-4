@@ -23,7 +23,7 @@ const D4NavBar = ({ title }) => (
       </Nav>
       <Form className="d-flex">
         <FormControl
-          type="search"
+          type="text"
           placeholder="Search"
           className="mr-2"
           aria-label="Search"
