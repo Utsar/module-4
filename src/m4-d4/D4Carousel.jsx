@@ -1,19 +1,12 @@
-import {
-  Card,
-  Carousel,
-  Col,
-  Container,
-  Row,
-  InputGroup,
-  FormControl,
-} from "react-bootstrap";
+import React from "react";
+import { Card, Carousel, Col, Container, Row } from "react-bootstrap";
 import history from "../assets/history.json";
 import fantasy from "../assets/fantasy.json";
-import { Component } from "react";
+import D4Form from "./D4Form";
 
-class D4Carousel extends Component {
+class D4Carousel extends React.Component {
   state = {
-    selected: null,
+    selected: false,
   };
   render() {
     return (
@@ -24,17 +17,17 @@ class D4Carousel extends Component {
             <Carousel>
               {history.map((book) => (
                 <Carousel.Item
-                  key={book.aisin}
+                  key={book.asin}
                   onClick={() =>
                     this.setState({
-                      selected: book,
+                      selected: !this.state.selected,
                     })
                   }
                 >
                   <img
                     className="d-block w-100"
                     src={book.img}
-                    alt={book.aisin}
+                    alt={book.asin}
                   />
                   <Card>
                     <Card.Body>
@@ -46,42 +39,7 @@ class D4Carousel extends Component {
                       {/* <Card.Link href="#">Another Link</Card.Link> */}
                     </Card.Body>
                   </Card>
-                  <InputGroup>
-                    <InputGroup.Text>Enter Your comments here</InputGroup.Text>
-                    <FormControl as="textarea" aria-label="With textarea" />
-                  </InputGroup>
-                </Carousel.Item>
-              ))}
-            </Carousel>
-          </Col>
-
-          <Col xs={12} md={6}>
-            <h2>Here are Fantasy books</h2>
-            <Carousel>
-              {fantasy.map((book) => (
-                <Carousel.Item
-                  key={book.aisin}
-                  onClick={() =>
-                    this.setState({
-                      selected: book,
-                    })
-                  }
-                >
-                  <img
-                    className="d-block w-100"
-                    src={book.img}
-                    alt="First slide"
-                  />
-                  <Card>
-                    <Card.Body>
-                      <Card.Title>{book.title}</Card.Title>
-                      <Card.Subtitle className="mb-2 text-muted">
-                        {book.category}
-                      </Card.Subtitle>
-                      <Card.Link href="#">${book.price}</Card.Link>
-                      {/* <Card.Link href="#">Another Link</Card.Link> */}
-                    </Card.Body>
-                  </Card>
+                  {this.state.selected && <D4Form asin={book.asin} />}
                 </Carousel.Item>
               ))}
             </Carousel>
