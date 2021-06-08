@@ -5,7 +5,7 @@ import SingleBook from "./SingleBook";
 const BookList = () => {
   const [searchQuery, setSearchQuery] = useState({ searchQuery });
   state = {
-    searchQuery: "",
+    searchQuery: "Hello",
   };
 
   return (
