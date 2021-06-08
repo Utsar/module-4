@@ -6,7 +6,7 @@ const MyNavBar = ({ title }) => (
     <Navbar.Brand href="#home">{title}</Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
-      <Nav className="ml-auto">
+      <Nav className="ml-10px">
         <Nav.Link href="#">About</Nav.Link>
         <Nav.Link href="#">Browse</Nav.Link>
         <Nav.Link href="#">Home</Nav.Link>
